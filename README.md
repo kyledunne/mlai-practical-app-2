@@ -24,19 +24,19 @@ An investigation of the data reveals the information that we have to work with. 
 
 One issue that immediately comes to light when looking through these columns is that we have some problematic outlier price and odometer data. Here is a boxplot of all the car prices, showing the problem with the distribution.
 
-
+![Boxplot of the distribution of car prices](images/car_prices_boxplot.png)
 
 Cars should not be costing billions of dollars! Looking into this further, many of these prices are clearly placeholder values, such as '123456789'. A similar issues is present with odometer values.
 
 There is also a lot of missing data in many of the other categorical columns. This graph shows the % missing data in each of the relevant categorical columns:
 
-
+![Missing data in each category](images/missing_data_barplot.png)
 
 Another issue arises in the 'model' column. There are over 13k models listed, and upon further investigation, many of these entries are just not formatted very well. Some contain the manufacturer, while leaving the manufacturer column blank, some contain the year, some contain other info that should be in other columns, and the formatting and ordering of the words is inconsistent. This makes this column very unweildy and difficult to work with.
 
 If we split the entries in the model column into individual words and make a chart of the most common words, we see the following
 
-
+![Top 10 Word Occurences in "Model" Category](images/model_top_words_barplot.png)
 
 'scion' is a brand, 'sedan' is a car type not a model, etc.
 
